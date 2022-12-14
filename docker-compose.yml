@@ -1,0 +1,16 @@
+services:
+  productservice:
+    #build keyword is used to build docker from docker file (product service is directory where docker file is located)
+    build: product-service  
+    ports:
+    #ports mapped external port of system with docker port.
+      - "5000:5000"
+
+      
+      #after this run follwoing commands 
+      #docker-compose build
+      #to create deafult network for container communication
+      #docker-compose up -d
+      #docker ps
+      #curl http://localhost:5000/products
+      #docker-compose down
